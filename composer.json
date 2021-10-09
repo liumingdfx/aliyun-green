@@ -1,0 +1,27 @@
+{
+    "name": "lmdfx/aliyun-green",
+    "description": "阿里云内容安全检测",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "lmdfx",
+            "email": "787896580@qq.com"
+        }
+    ],
+    "require": {
+        "alibabacloud/sdk": "^1.8",
+        "ext-json": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Lmdfx\\AliyunGreen\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AliyunGreenServiceProvider"
+            ]
+        }
+    }
+}
