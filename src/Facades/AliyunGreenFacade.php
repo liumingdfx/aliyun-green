@@ -13,6 +13,6 @@ class AliyunGreenFacade extends Facade {
      */
     protected static function getFacadeAccessor()
     {
-        return 'AliyunGreen';
+        return 'ali-green';
     }
 }
