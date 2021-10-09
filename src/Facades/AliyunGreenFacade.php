@@ -2,9 +2,9 @@
 
 namespace Lmdfx\AliyunGreen\Facades;
 
-use Illuminate\Support\Facades\Facade as AliyunGreenFacade;
+use Illuminate\Support\Facades\Facade;
 
-class Facade extends AliyunGreenFacade {
+class AliyunGreenFacade extends Facade {
 
     /**
      * Get the registered name of the component.
@@ -13,6 +13,6 @@ class Facade extends AliyunGreenFacade {
      */
     protected static function getFacadeAccessor()
     {
-        return 'AliyunGreen';
+        return 'aliyun-green';
     }
 }
