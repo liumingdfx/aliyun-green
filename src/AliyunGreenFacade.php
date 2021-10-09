@@ -1,6 +1,6 @@
 <?php
 
-namespace Lmdfx\AliyunGreen\Facades;
+namespace Lmdfx\AliyunGreen;
 
 use Illuminate\Support\Facades\Facade;
 
@@ -13,6 +13,6 @@ class AliyunGreenFacade extends Facade {
      */
     protected static function getFacadeAccessor()
     {
-        return 'ali-green';
+        return 'AliyunGreen';
     }
 }

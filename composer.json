@@ -24,7 +24,7 @@
                 "Lmdfx\\AliyunGreen\\AliyunGreenServiceProvider"
             ],
             "aliases": {
-                "AliyunGreen": "Lmdfx\\AliyunGreen\\Facades\\AliyunGreenFacade"
+                "AliyunGreen": "Lmdfx\\AliyunGreen\\AliyunGreenFacade"
             }
         }
     }
