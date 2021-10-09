@@ -22,7 +22,10 @@
         "laravel": {
             "providers": [
                 "Lmdfx\\AliyunGreen\\AliyunGreenServiceProvider"
-            ]
+            ],
+            "aliases": {
+                "AliyunGreen": "Lmdfx\\AliyunGreen\\Facades\\AliyunGreenFacade"
+            }
         }
     }
 }
