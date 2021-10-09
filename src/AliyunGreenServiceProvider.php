@@ -18,8 +18,6 @@ class AliyunGreenServiceProvider extends ServiceProvider
         $this->app->singleton(AliyunGreen::class, function(){
             return new AliyunGreen();
         });
-
-        $this->app->alias(AliyunGreen::class, 'ali-green');
     }
 
     public function provides()
