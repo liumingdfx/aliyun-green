@@ -20,7 +20,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "AliyunGreenServiceProvider"
+                "Lmdfx\\AliyunGreen\\AliyunGreenServiceProvider"
             ]
         }
     }
