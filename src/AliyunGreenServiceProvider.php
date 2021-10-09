@@ -15,13 +15,13 @@ class AliyunGreenServiceProvider extends ServiceProvider
 
     public function register()
     {
-        $this->app->singleton(AliyunGreen::class, function(){
+        $this->app->singleton('AliyunGreen', function(){
             return new AliyunGreen();
         });
     }
 
     public function provides()
     {
-        return [AliyunGreen::class, 'ali-green'];
+        return [AliyunGreen::class, 'AliyunGreen'];
     }
 }
