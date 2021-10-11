@@ -32,7 +32,7 @@ return [
         'ad',//广告
         'live',//不良场景
         'logo',//logo
-    ], //图片检测，需要的场景
+    ],
 
     'audio_scenes' => false, //true- 检测视频里面的语音是否违规，false-不检测视频里面的语音。
 ];
