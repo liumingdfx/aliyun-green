@@ -4,7 +4,7 @@
 ## Installing
 
 ```shell
-$ composer require lmdfx/aliyun-green -vvv
+$ composer require lmdfx/aliyun-green
 ```
 ## Service Provider
 ```shell
