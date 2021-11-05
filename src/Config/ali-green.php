@@ -35,4 +35,12 @@ return [
     ],
 
     'audio_scenes' => false, //true- 检测视频里面的语音是否违规，false-不检测视频里面的语音。
+
+    'video_callback' => 'https://xxx.com/', //视频检查回调
+
+    'seed' =>'66c7f0f462eeedd9', //随机字符串，该值用于回调通知请求中的签名。
+
+    'uid' => 'xxxx', //主账号UID
+
+    'bizType' => 'default',
 ];

@@ -78,6 +78,7 @@ class AliyunGreen
             return ['message' => '未开启检测', 'code' => 403];
         }
         $body = [
+            'bizType' => config('ali-green.bizType'),
             'scenes' => 'antispam',
             'tasks' => [
                 'content' => $text
@@ -101,6 +102,7 @@ class AliyunGreen
         $scenes = config('ali-green.image_scan_scenes');
 
         $body = [
+            'bizType' => config('ali-green.bizType'),
             'scenes' => $scenes,
             'tasks' => [
                 'url' => $url,//待检测图片url
@@ -123,11 +125,17 @@ class AliyunGreen
             return ['message' => '未开启检测', 'code' => 403];
         }
         $scenes = config('ali-green.video_scan_scenes');
+
+        $callback = config('ali-green.video_callback');
+
         $body = [
+            'bizType' => config('ali-green.bizType'),
             'scenes' => $scenes,
             'tasks' => [
                 'url' => $url,//待检测图片url
-            ]
+            ],
+            'callback' => $callback,//检测结果回调通知
+            'seed' => config('ali-green.seed'), //随机字符串，该值用于回调通知请求中的签名。
         ];
 
         if (config('ali-green.audio_scenes')) {

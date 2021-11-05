@@ -2,8 +2,9 @@
 
 namespace Lmdfx\AliyunGreen;
 
+use Illuminate\Contracts\Support\DeferrableProvider;
 use Illuminate\Support\ServiceProvider;
-class AliyunGreenServiceProvider extends ServiceProvider
+class AliyunGreenServiceProvider extends ServiceProvider implements DeferrableProvider
 {
     protected $defer = true;
 
@@ -22,6 +23,6 @@ class AliyunGreenServiceProvider extends ServiceProvider
 
     public function provides()
     {
-        return [AliyunGreen::class, 'AliyunGreen'];
+        return [AliyunGreen::class];
     }
 }
