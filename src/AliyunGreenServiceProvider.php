@@ -6,22 +6,23 @@ use Illuminate\Contracts\Support\DeferrableProvider;
 use Illuminate\Support\ServiceProvider;
 class AliyunGreenServiceProvider extends ServiceProvider implements DeferrableProvider
 {
-    protected $defer = true;
+    protected bool $defer = true;
 
-    public function boot(){
+    public function boot(): void
+    {
         $this->publishes([
             __DIR__.'/Config/ali-green.php' => config_path('ali-green.php'),// 发布配置文件到 laravel 的config下
         ]);
     }
 
-    public function register()
+    public function register(): void
     {
         $this->app->singleton('AliyunGreen', function(){
             return new AliyunGreen();
         });
     }
 
-    public function provides()
+    public function provides(): array
     {
         return [AliyunGreen::class];
     }

@@ -40,13 +40,14 @@ class AliyunGreen
 
     /**
      * 发送检测请求
+     *
      * @param $path
      * @param $body
-     * @throws ClientException
-     * @throws ServerException
+     * @param  string  $method
      *
+     * @return Result|array
      */
-    protected function sendQuery($path, $body, $method = 'POST')
+    protected function sendQuery($path, $body, $method = 'POST'): Result|array
     {
         if( $this->init_error ) {
             return ['message' => $this->init_error, 'code' => 403];
@@ -71,7 +72,7 @@ class AliyunGreen
      * @param $text
      * @return array
      */
-    public function greenTextScan($text)
+    public function greenTextScan($text): Result|array
     {
 
         if(!$this->enable){
@@ -90,11 +91,12 @@ class AliyunGreen
 
     /**
      * 检测图片
+     *
      * @param $url
-     * @param  string  $type async-异步 sync -同步
+     *
      * @return array
      */
-    public function greenImageScan($url)
+    public function greenImageScan($url): Result|array
     {
         if(!$this->enable){
             return ['message' => '未开启检测', 'code' => 403];
@@ -116,10 +118,12 @@ class AliyunGreen
 
     /**
      * 视频检测 -只能异步
+     *
      * @param $url
-     * @return array
+     *
+     * @return Result|array
      */
-    public function greenVideoScan($url)
+    public function greenVideoScan($url): Result|array
     {
         if(!$this->enable){
             return ['message' => '未开启检测', 'code' => 403];
@@ -156,7 +160,7 @@ class AliyunGreen
      * @throws ServerException
      * @throws ClientException
      */
-    public function getVideAsyncScanResult($taskId)
+    public function getVideAsyncScanResult($taskId): Result|array
     {
 
         $path = '/green/video/results';

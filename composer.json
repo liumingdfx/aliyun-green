@@ -10,6 +10,7 @@
         }
     ],
     "require": {
+        "php": ">=8.2",
         "alibabacloud/sdk": "^1.8",
         "ext-json": "*"
     },
